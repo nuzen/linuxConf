@@ -42,3 +42,12 @@
 (add-hook 'text-mode-hook 'highlight-symbol-mode)
 (add-hook 'emacs-lisp-mode-hook 'highlight-symbol-mode)
 
+;; Strike through for "done" items in emacs
+(setq org-fontify-done-headline t)
+(custom-set-faces
+ '(org-done ((t (:foreground "PaleGreen"   
+                 :weight normal
+                 :strike-through t))))
+ '(org-headline-done 
+            ((((class color) (min-colors 16) (background dark)) 
+               (:foreground "LightSalmon" :strike-through t)))))
