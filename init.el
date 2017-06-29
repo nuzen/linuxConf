@@ -4,6 +4,7 @@
 ;; 2. blackboard theme
 ;; 3. Auctex
 ;; 4. highlight-symbol-mode
+;; 5. Auto-Complete
 
 ;; Adding melpa repository
 (require 'package)
