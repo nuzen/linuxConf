@@ -40,10 +40,6 @@
 (global-set-key [f8] 'neotree-toggle)
 
 
-;; Enable highlight-symbol-mode for all modes that load text-mode, lisp-mode
-;;(add-hook 'text-mode-hook 'highlight-symbol-mode)
-;;(add-hook 'emacs-lisp-mode-hook 'highlight-symbol-mode)
-
 ;; Strike through for "done" items in emacs
 (setq org-fontify-done-headline t)
 
@@ -61,3 +57,6 @@
 ;; Enable highlight-symbol-mode for all modes that load text-mode, lisp-mode
 (add-hook 'text-mode-hook 'highlight-symbol-mode)
 (add-hook 'emacs-lisp-mode-hook 'highlight-symbol-mode)
+
+;; Adding auto-complete mode for text
+(add-hook 'text-mode-hook 'auto-complete-mode)
