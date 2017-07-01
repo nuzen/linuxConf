@@ -5,6 +5,7 @@
 ;; 3. Auctex
 ;; 4. highlight-symbol-mode
 ;; 5. Auto-Complete
+;; 6. ESS --> This one is downloaded from distribution repo. (apt-get install ess)
 
 ;; Adding melpa repository
 (require 'package)
