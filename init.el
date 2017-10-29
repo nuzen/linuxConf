@@ -15,7 +15,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("3629b62a41f2e5f84006ff14a2247e679745896b5eaa1d5bcfbc904a3441b0cd" default)))
+    ("8ed752276957903a270c797c4ab52931199806ccd9f0c3bb77f6f4b9e71b9272" "3629b62a41f2e5f84006ff14a2247e679745896b5eaa1d5bcfbc904a3441b0cd" default)))
  '(inhibit-startup-screen t)
  '(package-selected-packages (quote (auctex monokai-theme neotree))))
 (custom-set-faces
@@ -33,3 +33,7 @@
 
 ;; ---- Monokai theme ---;
 (load-theme 'monokai)
+
+
+;; --- Title bar contains name of the buffer ---;;
+(setq frame-title-format "%b")
