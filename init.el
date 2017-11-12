@@ -17,7 +17,9 @@
    (quote
     ("8ed752276957903a270c797c4ab52931199806ccd9f0c3bb77f6f4b9e71b9272" "3629b62a41f2e5f84006ff14a2247e679745896b5eaa1d5bcfbc904a3441b0cd" default)))
  '(inhibit-startup-screen t)
- '(package-selected-packages (quote (auctex monokai-theme neotree))))
+ '(package-selected-packages
+   (quote
+    (php-mode markdown-mode auctex monokai-theme neotree))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -37,3 +39,9 @@
 
 ;; --- Title bar contains name of the buffer ---;;
 (setq frame-title-format "%b")
+
+
+;; --- Auto load php-mode ---;;
+(autoload 'php-mode "php-mode" "Major mode for editing PHP code." t)
+(add-to-list 'auto-mode-alist '("\\.php$" . php-mode))
+(add-to-list 'auto-mode-alist '("\\.inc$" . php-mode))
