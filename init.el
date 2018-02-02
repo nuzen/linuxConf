@@ -45,7 +45,8 @@
 
 ;; ---- Monokai theme ---;
 ;;(load-theme 'monokai)
-(load-theme 'sanityinc-solarized-dark)
+;;(load-theme 'sanityinc-solarized-dark)
+(load-theme 'atom-dark)
 
 ;; --- Title bar contains name of the buffer ---;;
 (setq frame-title-format "%b")
