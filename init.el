@@ -37,7 +37,7 @@
  '(magit-diff-use-overlays nil)
  '(package-selected-packages
    (quote
-    (emmet-mode yasnippet company web-mode php-mode markdown-mode auctex monokai-theme neotree)))
+    (xah-fly-keys solarized-theme emmet-mode yasnippet company web-mode php-mode markdown-mode auctex monokai-theme neotree)))
  '(pos-tip-background-color "#FFFACE")
  '(pos-tip-foreground-color "#272822")
  '(vc-annotate-background nil)
@@ -71,14 +71,12 @@
  ;; If there is more than one, they won't work right.
  )
 
-;; ---- neotree ----;;
-(global-set-key [f8] 'neotree-toggle)
-
 
 ;; ---- Monokai theme ---;
 ;;(load-theme 'monokai)
 ;;(load-theme 'sanityinc-solarized-dark)
-(load-theme 'atom-dark)
+;;(load-theme 'atom-dark)
+(load-theme 'solarized-dark)
 
 ;; --- Title bar contains name of the buffer ---;;
 (setq frame-title-format "%b")
@@ -108,13 +106,12 @@
 (add-to-list 'auto-mode-alist '("\\.css?\\'" . web-mode))
 (add-to-list 'auto-mode-alist '("\\.js\\'" . web-mode))
 
-;; Set indentations
+
+
 (defun my-web-mode-hook ()
-  "Hooks for Web mode."
-  (setq web-mode-markup-indent-offset 2)
-  (setq web-mode-code-indent-offset 2)
-  (setq web-mode-css-indent-offset 2)
+  (set (make-local-variable 'company-backends) '(company-css company-web-html company-yasnippet company-files))
 )
+
 (add-hook 'web-mode-hook  'my-web-mode-hook)    
 
 ;; Highlight columns
@@ -123,9 +120,6 @@
 
 ;; Company settings
 (add-hook 'web-mode-hook 'company-mode)
-(defun my-web-mode-hook ()
-  (set (make-local-variable 'company-backends) '(company-css company-web-html company-yasnippet company-files))
-)
 
 ;; Emmet settings
 (add-hook 'web-mode-hook  'emmet-mode) 
@@ -139,3 +133,7 @@
                (if (string= web-mode-cur-language "css")
     	   (setq emmet-use-css-transform t)
       	 (setq emmet-use-css-transform nil)))))
+
+;; ---- neotree ----;;
+(global-set-key [f8] 'neotree-toggle)
+
