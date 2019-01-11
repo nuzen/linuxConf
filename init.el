@@ -60,11 +60,10 @@
 (multi-web-global-mode 1)
 
 
+;; -- Setting visual bell instead of audio bell --;;
+ (setq visible-bell 1)
 ;; -- Auctex --- ;;
 (setq reftex-plug-into-AUCTeX t)
-
-
-
 
 
 
