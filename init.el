@@ -3,13 +3,14 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(LaTeX-command "latex -synctex=1")
  '(custom-safe-themes
    (quote
     ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
-    (minimap auctex xah-fly-keys markdown-mode xah-find popup neotree monokai-theme async all-the-icons))))
+    (auto-complete minimap auctex xah-fly-keys markdown-mode xah-find popup neotree monokai-theme async all-the-icons))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -43,8 +44,6 @@
 
 ;; ---- neotree ----;;
 (global-set-key [f7] 'neotree-toggle)
-(setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-(require 'all-the-icons)
 
 ;; --- Theme --- ;;
 (load-theme 'monokai)
@@ -110,7 +109,7 @@
 (setq TeX-source-correlate-method 'synctex)
 ;; Enable synctex generation. Even though the command shows
 ;; as "latex" pdflatex is actually called
-(custom-set-variables '(LaTeX-command "latex -synctex=1") )
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -142,3 +141,17 @@
 ;; dvorak is the default
 
 (xah-fly-keys 1)
+
+
+
+
+;; --- Highlight current line --- ;;
+(global-hl-line-mode +1)
+(set-face-background hl-line-face "gray4")
+
+
+;; --- Switching on parem mode by default --- ;;
+(show-paren-mode 1)
+
+;; --- Auto commplete mode -- ;;
+(ac-config-default)
