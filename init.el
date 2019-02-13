@@ -6,7 +6,7 @@
  '(LaTeX-command "latex -synctex=1")
  '(custom-safe-themes
    (quote
-    ("bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
+    ("c0a7c8590ec62863f8470481c749e993cddfa1d30a0c7f35c81536faaa968cf2" "bd7b7c5df1174796deefce5debc2d976b264585d51852c962362be83932873d9" default)))
  '(inhibit-startup-screen t)
  '(package-selected-packages
    (quote
@@ -49,14 +49,6 @@
 (load-theme 'monokai)
 
 ;; --- Web development configuration --- ;;
-;; --- Multi web mode --- ;;
-(require 'multi-web-mode)
-(setq mweb-default-major-mode 'web-mode)
-(setq mweb-tags '((php-mode "<\\?php\\|<\\? \\|<\\?=" "\\?>")
-                  (js-mode "<script +\\(type=\"text/javascript\"\\|language=\"javascript\"\\)[^>]*>" "</script>")
-                  (css-mode "<style +type=\"text/css\"[^>]*>" "</style>")))
-(setq mweb-filename-extensions '("php" "htm" "html" "ctp" "phtml" "php4" "php5"))
-(multi-web-global-mode 1)
 
 
 ;; -- Setting visual bell instead of audio bell --;;
@@ -155,3 +147,7 @@
 
 ;; --- Auto commplete mode -- ;;
 (ac-config-default)
+
+
+;; --- Setting font in Windows ---;;
+(set-face-attribute 'default nil :family "Consolas" :height 110)
