@@ -1,0 +1,2 @@
+;;; -*- no-byte-compile: t -*-
+(define-package "xah-find" "20181201.1049" "find replace in pure emacs lisp. Purpose similar to grep/sed." '((emacs "24.1")) :commit "cde62a040dda923279320a1ba7eafa30411b8545" :keywords '("convenience" "extensions" "files" "tools" "unix") :authors '(("Xah Lee ( http://xahlee.info/ )")) :maintainer '("Xah Lee ( http://xahlee.info/ )") :url "http://ergoemacs.org/emacs/elisp-xah-find-text.html")
